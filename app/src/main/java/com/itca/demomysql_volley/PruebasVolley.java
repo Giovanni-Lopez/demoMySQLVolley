@@ -35,9 +35,12 @@ public class PruebasVolley extends AppCompatActivity {
         btnPeticionHTTP = (Button) findViewById(R.id.btnPeticionHTTP);
 
         btnPeticionHTTP.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 pruebaVolley();
+                //recibirJson();
+
 
             }
         });
@@ -87,14 +90,13 @@ public class PruebasVolley extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 System.out.println(response.substring(0, 16));
-//              tvRes.setText(response.substring(0, 16));
                 tvRes.setText(response.toString());
-                Toast.makeText(PruebasVolley.this, response.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PruebasVolley.this, ""+response.toString(), Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Toast.makeText(PruebasVolley.this, "Error. Problemas al intentar conectar con el servidor!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PruebasVolley.this, "Error, Problemas al intentar conectar con el servidor!!", Toast.LENGTH_SHORT).show();
             }
         });
 
