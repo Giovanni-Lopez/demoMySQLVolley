@@ -109,7 +109,7 @@ public class PruebasVolley extends AppCompatActivity {
         String url1 = "https://mjgl.com.sv/pruebaVolley/test.php";
 
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url1, (String) null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url1, null, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
